@@ -1,0 +1,36 @@
+body
+{
+	background-color: #f2f2f2;
+}
+.create-post-style
+{	
+	background-color: #ffffff;
+	border-radius: 5px;
+	padding: 10px;
+}
+input[type=text],select
+{
+	width: 40%;
+	padding: 15px;
+	display: inline-block;
+	margin: 8px 0;
+	border: 1px solid #f2f2f2;
+  	border-radius: 4px;
+  	background-color: #f2f2f2;
+}
+input[type=text]:hover {
+ 	background-color: #ffffff;
+}
+.scroll
+{
+	overflow: scroll;
+	height: 400px;
+}
+.post-hover:hover
+{
+	background-color: #f2f2f2;
+}
+.flex-padding
+{
+	padding: 5px;
+}
