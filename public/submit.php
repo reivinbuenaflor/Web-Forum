@@ -5,11 +5,12 @@ if(!isset($_SESSION['user']))
   header('location: ../public/login.php');
 }
 
-if($_SERVER['REQUEST_METHOD'] == 'POST')
+if(isset($_POST['submit']))
 {
 	$submitPost = new ThreadCont();
 	echo $_POST['content'];
-	$submitPost->getPost($_POST['title'],$_POST['content']);
+	echo $_POST['id'];
+	$submitPost->getPost($_POST['title'],$_POST['content'],intval($_POST['id']));
 }
 ?>
 <!DOCTYPE html>
@@ -75,12 +76,17 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 					</li>
 				</ul>	
 				<form action="submit.php" method="post">
-					<div class="form-group">
-					    <input type="text" class="form-control" placeholder="Title" name="title">
+					<div class="form-group title-content">
+					    <input type="text" class="form-control" placeholder="Title" name="title" maxlength="200">
+					    <div class="text-counter">
+					    	<span class="text-counter-current">0 </span>
+					    	<span class="text-counter-limit"> /200</span>
+					    </div> 
 					</div>
 					<div class="form-group">
 					    <textarea class="form-control" placeholder = "Text(optional)"rows="3" name="content"></textarea>
 					</div>
+					<input type="hidden" name="id" value="<?php echo $_GET['catid']?>">
 					<div class="form-group">
 					    <label for="exampleFormControlFile1">Insert image, file, or video.</label>
 					    <input type="file" class="form-control-file" name="media">

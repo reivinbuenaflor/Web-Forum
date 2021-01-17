@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 .container
 {
 	padding: 10px;
@@ -11,4 +14,92 @@
 {
 	padding: 10px;
 	border-bottom: solid #f2f2f2;
+}
+
+body{
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    line-height: 1.4;
+    color: rgba(0, 0, 0, 0.85);
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.comment
+{
+	position: relative;
+	margin: 20px auto;
+}
+.comment-heading
+{
+	display: flex;
+    align-items: center;
+    height: 50px;
+    font-size: 14px;
+}
+
+.comment-info {
+    color: rgba(0, 0, 0, 0.5);
+    margin-left: 10px;
+}
+
+.comment-author {
+    color: rgba(0, 0, 0, 0.85);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.comment-author:hover {
+    text-decoration: underline;
+}
+
+.comment-border-link {
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 12px;
+    height: calc(100% - 50px);
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    background-color: rgba(0, 0, 0, 0.1);
+    background-clip: padding-box;
+}
+
+.comment-border-link:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.comment-body {
+    padding: 0 20px;
+    padding-left: 28px;
+}
+
+.comment-thread
+{
+	flex: 1;
+	max-width: 100%;
+	padding: 10px;
+	word-break: break-word;
+	overflow: auto;
+	padding-bottom: 1px;
+}
+
+.title{
+	flex: 1;
+	max-width: 100%;
+	padding: 10px;
+	word-break: break-word;
+	overflow: auto;
+	padding-bottom: 1px;
 }
