@@ -1,6 +1,7 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] .'/webforum/app/database/database.php';
 session_start();
+
 //This class handles the insertion, and authentication registered to database
 
 class AuthMod extends Database
